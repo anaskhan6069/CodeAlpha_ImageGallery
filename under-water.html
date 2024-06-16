@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="header header-under-water">
+        <div class="content">
+            <div class="btn">
+                <a href="index.html">All</a>
+                <a href="animals.html">Animals</a>
+                <a href="birds.html">Birds</a>
+                <a href="nature.html">Nature</a>
+                <a href="flowers.html">Flowers</a>
+                <a href="under-water.html" class="active">Under Water</a>
+            </div>
+            <h1>Image Gallery For<span> You</span></h1>
+            <p>"Explore a captivating selection of underwater images created just for you."</p>
+
+            <div class="social-bar">
+                <a href=""><i class="fa-brands fa-facebook" style="color: #1877F2;"></i></a>
+                <a href=""><i class="fa-brands fa-instagram " id="insta" style="color: #fa7e1e;"></i></a>
+                <a href=""><i class="fa-brands fa-twitter" style="color: #1DA1F2;"></i></a>
+                <a href=""><i class="fa-brands fa-youtube" style="color: #FF0000;"></i></a>
+            </div>
+
+        </div>
+    </div>
+    <div class="gallery">
+        <div class="photo-col">
+            <img src="Under-water/under-water-1.jpg" alt="Image 1" class="thumbnail"
+                onclick="openLightbox(0, `under-water`)">
+            <img src="Under-water/under-water-4.jpg" alt="Image 1" class="thumbnail"
+                onclick="openLightbox(3, `under-water`)">
+            <img src="Under-water/under-water-7.jpg" alt="Image 1" class="thumbnail"
+                onclick="openLightbox(6, `under-water`)">
+        </div>
+
+        <div class="photo-col">
+            <img src="Under-water/under-water-2.jpg" alt="Image 2" class="thumbnail"
+                onclick="openLightbox(1, `under-water`)">
+            <img src="Under-water/under-water-5.jpg" alt="Image 2" class="thumbnail"
+                onclick="openLightbox(4, `under-water`)">
+            <img src="Under-water/under-water-8.jpg" alt="Image 2" class="thumbnail"
+                onclick="openLightbox(7, `under-water`)">
+        </div>
+
+        <div class="photo-col">
+            <img src="Under-water/under-water-3.jpg" alt="Image 3" class="thumbnail"
+                onclick="openLightbox(2, `under-water`)">
+            <img src="Under-water/under-water-6.jpg" alt="Image 3" class="thumbnail"
+                onclick="openLightbox(5, `under-water`)">
+        </div>
+    </div>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <div class="image-box">
+            <img id="lightbox-image" class="lightbox-image">
+        </div>
+        <div class="navigation">
+            <span class="prev" onclick="changeImage(-1)">&#10094;</span>
+            <span class="next" onclick="changeImage(1)">&#10095;</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

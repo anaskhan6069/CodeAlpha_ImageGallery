@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+
+    <!-- Awesome Icons     -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="content">
+            <div class="btn">
+                <a href="index.html" class="active">All</a>
+                <a href="animals.html">Animals</a>
+                <a href="birds.html">Birds</a>
+                <a href="nature.html">Nature</a>
+                <a href="flowers.html">Flowers</a>
+                <a href="under-water.html">Under Water</a>
+            </div>
+            <h1>Image Gallery For<span> You</span></h1>
+            <p>"Discover a stunning collection of images selected just for you."</p>
+
+            <div class="social-bar">
+                <a href=""><i class="fa-brands fa-facebook" style="color: #1877F2;"></i></a>
+                <a href=""><i class="fa-brands fa-instagram " id="insta" style="color: #fa7e1e;"></i></a>
+                <a href=""><i class="fa-brands fa-twitter" style="color: #1DA1F2;"></i></a>
+                <a href=""><i class="fa-brands fa-youtube" style="color: #FF0000;"></i></a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="gallery">
+        <div class="photo-col">
+            <img src="Flowers/flowers-4.jpg" alt="Image 1" class="thumbnail" onclick="openLightbox(0, `all`)">
+            <img src="Flowers/flowers-6.jpg" alt="Image 3" class="thumbnail" onclick="openLightbox(3, `all`)">
+            <img src="Flowers/flowers-5.jpg" alt="Image 2" class="thumbnail" onclick="openLightbox(6, `all`)">
+            <img src="Under-water/under-water-2.jpg" alt="Image 2" class="thumbnail" onclick="openLightbox(9, `all`)">
+            <img src="Birds/bird-5.jpg" alt="Image 2" class="thumbnail" onclick="openLightbox(12, `all`)">
+            <img src="Nature/nature-12.jpg" alt="Image 3" class="thumbnail" onclick="openLightbox(15, `all`)">
+            <img src="Under-water/under-water-5.jpg" alt="Image 2" class="thumbnail" onclick="openLightbox(18, `all`)">
+            <img src="Under-water/under-water-6.jpg" alt="Image 3" class="thumbnail" onclick="openLightbox(21, `all`)">
+        </div>
+
+        <div class="photo-col">
+            <img src="Birds/bird-4.jpg" alt="Image 1" class="thumbnail" onclick="openLightbox(1, `all`)">
+            <img src="Under-water/under-water-1.jpg" alt="Image 1" class="thumbnail" onclick="openLightbox(4, `all`)">
+            <img src="Birds/bird-6.jpg" alt="Image 3" class="thumbnail" onclick="openLightbox(7, `all`)">
+            <img src="Nature/nature-11.jpg" alt="Image 3" class="thumbnail" onclick="openLightbox(10, `all`)">
+            <img src="Under-water/under-water-3.jpg" alt="Image 3" class="thumbnail" onclick="openLightbox(13, `all`)">
+            <img src="Under-water/under-water-8.jpg" alt="Image 2" class="thumbnail" onclick="openLightbox(16, `all`)">
+            <img src="Nature/nature-1.jpg" alt="Image 1" class="thumbnail" onclick="openLightbox(19, `all`)">
+            <img src="Animals/Animal-4.jpg" alt="Image 1" class="thumbnail" onclick="openLightbox(22, `all`)">
+        </div>
+
+        <div class="photo-col">
+            <img src="Nature/nature-10.jpg" alt="Image 2" class="thumbnail" onclick="openLightbox(2, `all`)">
+            <img src="Nature/nature-9.jpg" alt="Image 1" class="thumbnail" onclick="openLightbox(5, `all`)">
+            <img src="Animals/Animal-1.jpg" alt="Image 1" class="thumbnail" onclick="openLightbox(8, `all`)">
+            <img src="Animals/Animal-2.jpg" alt="Image 2" class="thumbnail" onclick="openLightbox(11, `all`)">
+            <img src="Animals/Animal-3.jpg" alt="Image 3" class="thumbnail" onclick="openLightbox(14, `all`)">
+            <img src="Nature/nature-3.jpg" alt="Image 3" class="thumbnail" onclick="openLightbox(17, `all`)">
+            <img src="Flowers/flowers-2.jpg" alt="Image 2" class="thumbnail" onclick="openLightbox(20, `all`)">
+            <img src="Flowers/flowers-1.jpg" alt="Image 1" class="thumbnail" onclick="openLightbox(23, `all`)">
+
+        </div>
+    </div>
+
+
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <div class="image-box">
+            <img id="lightbox-image" class="lightbox-image">
+        </div>
+        <div class="navigation">
+            <span class="prev" onclick="changeImage(-1)">&#10094;</span>
+            <span class="next" onclick="changeImage(1)">&#10095;</span>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
